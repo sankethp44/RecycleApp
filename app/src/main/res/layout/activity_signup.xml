@@ -18,13 +18,26 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="320dp"
+            android:layout_marginLeft="10dp"
             android:padding="20dp">
 
             <EditText
                 android:layout_width="350dp"
                 android:layout_height="60dp"
+                android:id="@+id/signup_name"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/lavender_border"
+                android:padding="8dp"
+                android:hint="Name"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="8dp"
+                android:textColor="@color/grey"/>
+
+            <EditText
+                android:layout_width="350dp"
+                android:layout_height="60dp"
                 android:id="@+id/signup_email"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/lavender_border"
                 android:padding="8dp"
                 android:hint="Email"
@@ -36,7 +49,7 @@
                 android:layout_width="350dp"
                 android:layout_height="60dp"
                 android:id="@+id/signup_password"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/lavender_border"
                 android:padding="8dp"
                 android:hint="Password"
@@ -49,7 +62,7 @@
                 android:layout_width="350dp"
                 android:layout_height="60dp"
                 android:id="@+id/signup_confirm"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/lavender_border"
                 android:padding="8dp"
                 android:hint="Confirm Password"
@@ -62,7 +75,7 @@
                 android:id="@+id/signup_button"
                 android:layout_width="350dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:text="Sign Up"
                 android:textSize="18sp"
                 app:cornerRadius="30dp" />
@@ -72,10 +85,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="0dp"
                 android:padding="8dp"
                 android:text="Already an user? Login"
-                android:textColor="@color/lavender"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
         </LinearLayout>

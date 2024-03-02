@@ -22,6 +22,7 @@ android {
     }
     buildFeatures{
         viewBinding=true
+        dataBinding=true
     }
     buildTypes {
         release {
@@ -51,4 +52,5 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation ("androidx.databinding:databinding-runtime:8.2.2")
 }

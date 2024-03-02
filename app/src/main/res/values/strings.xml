@@ -4,7 +4,7 @@
 
 	<string name="ek_img_content">ExportKit Image</string>
 	<string name="welcome_string">Welcome</string>
-	<string name="_9___40_string">9 : 40</string>
+	<string name="timestring">9 : 40</string>
 	<string name="recycle_your_waste_materials_string">Recycle  your Waste Materials</string>
-	<string name="get_started_string">Get Started</string>
+
 </resources>
