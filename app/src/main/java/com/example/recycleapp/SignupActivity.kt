@@ -31,10 +31,8 @@ class SignupActivity : AppCompatActivity() {
                     firebaseAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
-                                // Get the current user
                                 val user = firebaseAuth.currentUser
 
-                                // Update the user's profile with the name
                                 val profileUpdates = UserProfileChangeRequest.Builder()
                                     .setDisplayName(name)
                                     .build()
@@ -82,7 +80,6 @@ class SignupActivity : AppCompatActivity() {
                     "Please check your email for verification.",
                     Toast.LENGTH_SHORT
                 ).show()
-                // Optionally, you can direct the user to the login screen
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()

@@ -1,20 +1,158 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content" >
 
-    <TextView
+    <ScrollView android:id="@+id/activity_main"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to our app"
-        android:textColor="@color/lavender"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout android:id="@+id/content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+
+
+            <RelativeLayout android:id="@+id/page_homepage_ek1"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <View android:id="@+id/_bg__homepage_ek2"
+                    android:background="@drawable/_bg__homepage_ek2_shape"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="411dp"
+                    android:layout_height="896dp" />
+
+                <ImageView android:id="@+id/menu"
+                    android:src="@drawable/menu"
+                    android:contentDescription="menu"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_width="59dp"
+                    android:layout_height="60dp" />
+
+                <ImageView android:id="@+id/search"
+                    android:src="@drawable/search"
+                    android:contentDescription="search"
+                    android:layout_marginStart="330dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp" />
+
+                <ImageView android:id="@+id/line_1"
+                    android:src="@drawable/line_1"
+                    android:contentDescription="line_1"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="825dp"
+                    android:layout_width="414dp"
+                    android:layout_height="1dp" />
+
+                <ImageView android:id="@+id/people_recycling_at_home_concept_free_vector_1"
+                    android:src="@drawable/people_recycling_at_home_concept_free_vector_1"
+                    android:contentDescription="people_recycling_at_home_concept_free_vector_1"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="114dp"
+                    android:layout_width="366dp"
+                    android:layout_height="383dp" />
+
+                <TextView android:id="@+id/earn_points_by_discarding_trash"
+                    android:textSize="25sp"
+                    android:textColor="@color/earn_points_by_discarding_trash_color"
+                    android:layout_marginLeft="52dp"
+                    android:layout_marginTop="117dp"
+                    android:layout_width="247.5dp"
+                    android:layout_height="67.5dp"
+                    android:text="@string/earn_points_by_discarding_trash_string"
+                    />
+
+                <TextView android:id="@+id/categories"
+                    android:textStyle="bold"
+                    android:textSize="32sp"
+                    android:textColor="@color/earn_points_by_discarding_trash_color"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="516dp"
+                    android:layout_width="257.2dp"
+                    android:layout_height="48.2dp"
+                    android:text="Recyclable Items"
+                    />
+                <!-- Add this below the TextView with id "categories" -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="586dp"
+                    android:layout_marginLeft="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Sample Category Image Views -->
+                        <ImageView
+                            android:layout_width="171dp"
+                            android:layout_height="184dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/category_image_1" />
+
+                        <ImageView
+                            android:layout_width="171dp"
+                            android:layout_height="184dp"
+                            android:src="@drawable/category_image_2"
+                            android:layout_marginRight="8dp"/>
+                        <ImageView
+                            android:layout_width="171dp"
+                            android:layout_height="184dp"
+                            android:src="@drawable/category_image_3"
+                            android:layout_marginRight="8dp"/>
+                        <ImageView
+                            android:layout_width="171dp"
+                            android:layout_height="184dp"
+                            android:src="@drawable/category_image_4"
+                            android:layout_marginRight="8dp"/>
+                        <ImageView
+                            android:layout_width="171dp"
+                            android:layout_height="184dp"
+                            android:src="@drawable/category_image_5"
+                            android:layout_marginRight="8dp"/>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <ImageView android:id="@+id/home"
+                    android:src="@drawable/home"
+                    android:contentDescription="home"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="837dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp" />
+
+                <ImageView android:id="@+id/location"
+                    android:src="@drawable/location"
+                    android:contentDescription="location"
+                    android:layout_marginStart="237dp"
+                    android:layout_marginTop="837dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp" />
+
+                <ImageView android:id="@+id/scanner"
+                    android:src="@drawable/scanner"
+                    android:contentDescription="scanner"
+                    android:layout_marginStart="129dp"
+                    android:layout_marginTop="837dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp" />
+
+                <ImageView android:id="@+id/person"
+                    android:src="@drawable/person"
+                    android:contentDescription="person"
+                    android:layout_marginStart="345dp"
+                    android:layout_marginTop="837dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</HorizontalScrollView>

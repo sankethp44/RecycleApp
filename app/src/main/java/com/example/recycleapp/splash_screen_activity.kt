@@ -39,20 +39,19 @@ class splash_screen_activity : AppCompatActivity() {
         binding = SplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Now, you can directly use the views through the binding object
         val bgSplashScreenEk2: View = findViewById(R.id._bg__splash_screen_ek2)
-        binding.vector9 // Use this for vector_9
-        binding.rectangle2 // Use this for rectangle_2
-        binding.leaf // Use this for leaf
-        binding.welcome // Use this for welcome
-        binding.recycleYourWasteMaterials // Use this for recycle_your_waste_materials
-        binding.can // Use this for can
-        binding.vector1 // Use this for vector_1
-        binding.vector2 // Use this for vector_2
-        binding.vector3 // Use this for vector_3
-        binding.leaf1 // Use this for leaf1
-        binding.news // Use this for news
-        binding.dustbin // Use this for dustbin
+        binding.vector9
+        binding.rectangle2
+        binding.leaf
+        binding.welcome
+        binding.recycleYourWasteMaterials
+        binding.can
+        binding.vector1
+        binding.vector2
+        binding.vector3
+        binding.leaf1
+        binding.news
+        binding.dustbin
 
         // Load animation
         val slideUp: Animation = AnimationUtils.loadAnimation(this, R.anim.slide_up)

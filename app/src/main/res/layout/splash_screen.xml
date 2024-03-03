@@ -4,21 +4,6 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
-<!--
-	/*
-	 *	This content is generated from the API File Info.
-	 *	(Alt+Shift+Ctrl+I).
-	 *
-	 *	@desc
-	 *	@file 		splash_screen
-	 *	@date 		Thursday 29th of February 2024 02:56:10 PM
-	 *	@title 		Page 1
-	 *	@author
-	 *	@keywords
-	 *	@generator 	Export Kit v1.3.figma
-	 *
-	 */
-	-->
 	<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/content_container"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent" >
@@ -99,11 +84,6 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<!-- ImageView 2 -->
-
-	<!-- TextView for 'time' -->
-
-	<!-- TextView for 'recycle_your_waste_materials' -->
 	<TextView
 		android:id="@+id/recycle_your_waste_materials"
 		android:layout_width="309dp"
@@ -137,7 +117,6 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<!-- ImageView with ID vector_1 -->
 	<ImageView
 		android:id="@+id/vector_1"
 		android:layout_width="wrap_content"
@@ -149,7 +128,6 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<!-- ImageView with ID vector_2 -->
 	<ImageView
 		android:id="@+id/vector_2"
 		android:layout_width="43dp"
@@ -161,7 +139,6 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<!-- ImageView with ID vector_3 -->
 	<ImageView
 		android:id="@+id/vector_3"
 		android:layout_width="43dp"
@@ -173,7 +150,6 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<!-- ImageView with ID leaf1 -->
 	<ImageView
 		android:id="@+id/leaf1"
 		android:layout_width="76dp"
@@ -185,7 +161,6 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<!-- ImageView with ID news -->
 	<ImageView
 		android:id="@+id/news"
 		android:layout_width="wrap_content"
@@ -197,7 +172,6 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<!-- ImageView with ID dustbin -->
 	<ImageView
 		android:id="@+id/dustbin"
 		android:layout_width="335dp"

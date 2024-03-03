@@ -21,4 +21,7 @@
 	<color name="timecolor">#000000</color>
 	<color name="get_started_color">#FFFFFF</color>
 	<color name="rectangle_1_color">#D6DA2C</color>
+
+	<color name="_bg__homepage_ek2_color">#EFE3E3</color>
+	<color name="earn_points_by_discarding_trash_color">#000000</color>
 </resources>
