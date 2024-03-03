@@ -2,7 +2,6 @@
 <resources>
     <color name="lavender">#59DA67</color>
     <color name="grey">#ff424242</color>
-    <!-- splash_screen colors -->
 
 	<color name="colorPrimary">#008577</color>
 	<color name="colorPrimaryDark">#00574B</color>

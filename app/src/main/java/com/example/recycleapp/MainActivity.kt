@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
+import androidx.drawerlayout.widget.DrawerLayout
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var _bgHomepageEk2: View
@@ -34,5 +38,14 @@ class MainActivity : AppCompatActivity() {
         location = findViewById(R.id.location)
         scanner = findViewById(R.id.scanner)
         person = findViewById(R.id.person)
+
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val drawerView = findViewById<LinearLayout>(R.id.drawer)
+
+        fun openDrawer(view: View) {
+            drawerLayout.openDrawer(drawerView)
+        }
+
     }
+
 }

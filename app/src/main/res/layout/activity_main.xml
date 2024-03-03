@@ -1,5 +1,13 @@
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="wrap_content" >
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView android:id="@+id/activity_main"
         android:layout_width="wrap_content"
@@ -77,7 +85,7 @@
                     android:layout_height="48.2dp"
                     android:text="Recyclable Items"
                     />
-                <!-- Add this below the TextView with id "categories" -->
+
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
@@ -149,10 +157,35 @@
                     android:layout_marginStart="345dp"
                     android:layout_marginTop="837dp"
                     android:layout_width="44dp"
-                    android:layout_height="44dp" />
+                    android:layout_height="44dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="openDrawer"/>
+
+                <LinearLayout
+                    android:id="@+id/drawer"
+                    android:layout_width="380dp"
+                    android:layout_height="850dp"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="81dp"
+                    android:background="@drawable/rounded_corners_background"
+                    android:elevation="16dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile Content"
+                        android:textSize="18sp" />
+                </LinearLayout>
 
             </RelativeLayout>
+
         </RelativeLayout>
 
     </ScrollView>
 </HorizontalScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
