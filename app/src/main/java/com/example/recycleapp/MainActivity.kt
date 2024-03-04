@@ -39,12 +39,6 @@ class MainActivity : AppCompatActivity() {
         scanner = findViewById(R.id.scanner)
         person = findViewById(R.id.person)
 
-        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
-        val drawerView = findViewById<LinearLayout>(R.id.drawer)
-
-        fun openDrawer(view: View) {
-            drawerLayout.openDrawer(drawerView)
-        }
 
     }
 

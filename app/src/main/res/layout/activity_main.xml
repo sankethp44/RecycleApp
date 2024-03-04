@@ -17,8 +17,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
-
-
             <RelativeLayout android:id="@+id/page_homepage_ek1"
                 android:layout_marginTop="0dp"
                 android:layout_marginStart="0dp"
@@ -86,47 +84,7 @@
                     android:text="Recyclable Items"
                     />
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="586dp"
-                    android:layout_marginLeft="16dp">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <!-- Sample Category Image Views -->
-                        <ImageView
-                            android:layout_width="171dp"
-                            android:layout_height="184dp"
-                            android:layout_marginRight="8dp"
-                            android:src="@drawable/category_image_1" />
-
-                        <ImageView
-                            android:layout_width="171dp"
-                            android:layout_height="184dp"
-                            android:src="@drawable/category_image_2"
-                            android:layout_marginRight="8dp"/>
-                        <ImageView
-                            android:layout_width="171dp"
-                            android:layout_height="184dp"
-                            android:src="@drawable/category_image_3"
-                            android:layout_marginRight="8dp"/>
-                        <ImageView
-                            android:layout_width="171dp"
-                            android:layout_height="184dp"
-                            android:src="@drawable/category_image_4"
-                            android:layout_marginRight="8dp"/>
-                        <ImageView
-                            android:layout_width="171dp"
-                            android:layout_height="184dp"
-                            android:src="@drawable/category_image_5"
-                            android:layout_marginRight="8dp"/>
-
-                    </LinearLayout>
-                </HorizontalScrollView>
                 <ImageView android:id="@+id/home"
                     android:src="@drawable/home"
                     android:contentDescription="home"
@@ -159,27 +117,7 @@
                     android:layout_width="44dp"
                     android:layout_height="44dp"
                     android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="openDrawer"/>
-
-                <LinearLayout
-                    android:id="@+id/drawer"
-                    android:layout_width="380dp"
-                    android:layout_height="850dp"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="34dp"
-                    android:layout_marginTop="81dp"
-                    android:background="@drawable/rounded_corners_background"
-                    android:elevation="16dp"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Profile Content"
-                        android:textSize="18sp" />
-                </LinearLayout>
+                    android:focusable="true" />
 
             </RelativeLayout>
 
@@ -187,5 +125,47 @@
 
     </ScrollView>
 </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="586dp"
+        android:layout_marginLeft="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Sample Category Image Views -->
+            <ImageView
+                android:layout_width="171dp"
+                android:layout_height="184dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/category_image_1" />
+
+            <ImageView
+                android:layout_width="171dp"
+                android:layout_height="184dp"
+                android:src="@drawable/category_image_2"
+                android:layout_marginRight="8dp"/>
+            <ImageView
+                android:layout_width="171dp"
+                android:layout_height="184dp"
+                android:src="@drawable/category_image_3"
+                android:layout_marginRight="8dp"/>
+            <ImageView
+                android:layout_width="171dp"
+                android:layout_height="184dp"
+                android:src="@drawable/category_image_4"
+                android:layout_marginRight="8dp"/>
+            <ImageView
+                android:layout_width="171dp"
+                android:layout_height="184dp"
+                android:src="@drawable/category_image_5"
+                android:layout_marginRight="8dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
