@@ -154,11 +154,7 @@
                 android:layout_height="184dp"
                 android:src="@drawable/category_image_3"
                 android:layout_marginRight="8dp"/>
-            <ImageView
-                android:layout_width="171dp"
-                android:layout_height="184dp"
-                android:src="@drawable/category_image_4"
-                android:layout_marginRight="8dp"/>
+
             <ImageView
                 android:layout_width="171dp"
                 android:layout_height="184dp"
