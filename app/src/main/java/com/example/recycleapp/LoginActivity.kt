@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableString
+import android.text.method.PasswordTransformationMethod
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
@@ -13,17 +14,23 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.example.recycleapp.databinding.ActivityLoginBinding
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var passwordInputLayout: TextInputLayout
+    private lateinit var passwordEditText: TextInputEditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        passwordInputLayout = findViewById(R.id.passwordTextInputLayout)
+        passwordEditText = findViewById(R.id.login_password)
 
         firebaseAuth = FirebaseAuth.getInstance()
 
@@ -71,6 +78,9 @@ class LoginActivity : AppCompatActivity() {
             val signupIntent = Intent(this, SignupActivity::class.java)
             startActivity(signupIntent)
         }
+        passwordInputLayout.setEndIconOnClickListener {
+            togglePasswordVisibility()
+        }
     }
 
     private fun compareEmail(email: EditText){
@@ -86,5 +96,17 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Check your email", Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+
+
+    private fun togglePasswordVisibility() {
+        // Toggle password visibility
+        if (passwordEditText.transformationMethod == PasswordTransformationMethod.getInstance()) {
+            // Password is currently hidden, show it
+            passwordEditText.transformationMethod = null
+        } else {
+            // Password is currently shown, hide it
+            passwordEditText.transformationMethod = PasswordTransformationMethod.getInstance()
+        }
     }
 }

@@ -18,45 +18,64 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="@dimen/_350sdp"
-                android:layout_height="@dimen/_350sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_370sdp"
+                android:layout_marginTop="@dimen/_260sdp"
                 android:orientation="vertical"
                 android:padding="20dp">
 
                 <EditText
                     android:id="@+id/login_email"
-                    android:layout_width="@dimen/_270sdp"
+                    android:layout_width="@dimen/_250sdp"
                     android:layout_height="@dimen/_48sdp"
                     android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
                     android:background="@drawable/lavender_border"
-                    android:drawableLeft="@drawable/ic_baseline_email_24"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
                     android:drawablePadding="@dimen/_8sdp"
                     android:hint="Email"
+                    android:textColorHint="#BEB9C5C3"
                     android:padding="@dimen/_8sdp"
-                    android:textColor="@color/grey" />
+                    android:textColor="@color/black"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"/>
 
-                <EditText
-                    android:id="@+id/login_password"
-                    android:layout_width="@dimen/_270sdp"
-                    android:layout_height="@dimen/_48sdp"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lavender_border"
-                    android:drawableLeft="@drawable/ic_baseline_lock_24"
-                    android:drawablePadding="@dimen/_8sdp"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:padding="@dimen/_8sdp"
-                    android:textColor="@color/grey" />
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/login_password"
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_height="@dimen/_48sdp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableStart="@drawable/ic_baseline_lock_24"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="4dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
 
 
                 <Button
                     android:id="@+id/login_button"
-                    android:layout_width="@dimen/_270sdp"
+                    android:layout_width="@dimen/_230sdp"
                     android:layout_height="@dimen/_48sdp"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:text="Login"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
                     android:textSize="@dimen/_20ssp"
                     app:cornerRadius="@dimen/_30sdp" />
 

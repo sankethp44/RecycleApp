@@ -2,58 +2,8 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
-
-	<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/content_container"
-		android:layout_width="@dimen/_315sdp"
-		android:layout_height="match_parent" >
-
-		<androidx.constraintlayout.widget.ConstraintLayout
-			android:id="@+id/page_splash_screen_ek1"
-			android:layout_width="0dp"
-			android:layout_height="0dp"
-			app:layout_constraintBottom_toBottomOf="parent"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintHorizontal_bias="1.0"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintVertical_bias="1.0">
-
-		</androidx.constraintlayout.widget.ConstraintLayout>
-
-	</androidx.constraintlayout.widget.ConstraintLayout>
-
-	<View
-		android:id="@+id/_bg__splash_screen_ek2"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:background="@drawable/_bg__splash_screen_ek2_shape"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
-
-	<ImageView
-		android:id="@+id/vector_9"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:contentDescription="vector_9"
-		android:src="@drawable/vector_9"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		app:tint="#93D637" />
-
-	<View
-		android:id="@+id/rectangle_2"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:background="@drawable/rectangle_2_shape"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+	android:layout_height="match_parent"
+	>
 
 	<ImageView
 		android:id="@+id/leaf"
@@ -71,15 +21,15 @@
 		android:id="@+id/welcome"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="93dp"
-		android:layout_marginTop="25dp"
+		android:layout_marginStart="@dimen/_63sdp"
+		android:layout_marginTop="@dimen/_17sdp"
 		android:shadowColor="#000000"
 		android:shadowDx="0"
 		android:shadowDy="4"
 		android:shadowRadius="4"
 		android:text="@string/welcome_string"
 		android:textColor="@color/welcome_color"
-		android:textSize="55sp"
+		android:textSize="@dimen/_45ssp"
 		android:textStyle="bold"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
@@ -110,7 +60,7 @@
 		android:id="@+id/can"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="318dp"
+		android:layout_marginStart="@dimen/_248sdp"
 		android:layout_marginTop="92dp"
 		android:contentDescription="can"
 		android:src="@drawable/can"
@@ -121,7 +71,7 @@
 		android:id="@+id/vector_1"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="297dp"
+		android:layout_marginStart="@dimen/_237sdp"
 		android:layout_marginTop="158dp"
 		android:contentDescription="vector_1"
 		android:src="@drawable/vector_1"
@@ -132,7 +82,7 @@
 		android:id="@+id/vector_2"
 		android:layout_width="43dp"
 		android:layout_height="52dp"
-		android:layout_marginStart="367dp"
+		android:layout_marginStart="@dimen/_287sdp"
 		android:layout_marginTop="72dp"
 		android:contentDescription="vector_2"
 		android:src="@drawable/vector_2"
@@ -141,9 +91,9 @@
 
 	<ImageView
 		android:id="@+id/vector_3"
-		android:layout_width="43dp"
+		android:layout_width="@dimen/_43sdp"
 		android:layout_height="33dp"
-		android:layout_marginStart="367dp"
+		android:layout_marginStart="@dimen/_287sdp"
 		android:layout_marginTop="110dp"
 		android:contentDescription="vector_3"
 		android:src="@drawable/vector_3"
@@ -155,7 +105,7 @@
 		android:layout_width="@dimen/_76sdp"
 		android:layout_height="@dimen/_61sdp"
 		android:layout_marginStart="@dimen/_230sdp"
-		android:layout_marginTop="355dp"
+		android:layout_marginTop="@dimen/_305sdp"
 		android:contentDescription="leaf1"
 		android:src="@drawable/leaf1"
 		app:layout_constraintStart_toStartOf="parent"
@@ -166,7 +116,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="@dimen/_85sdp"
 		android:layout_marginStart="175dp"
-		android:layout_marginTop="372dp"
+		android:layout_marginTop="@dimen/_302sdp"
 		android:contentDescription="news"
 		android:src="@drawable/news"
 		app:layout_constraintStart_toStartOf="parent"
@@ -176,8 +126,8 @@
 		android:id="@+id/dustbin"
 		android:layout_width="@dimen/_275sdp"
 		android:layout_height="@dimen/_373sdp"
-		android:layout_marginStart="130dp"
-		android:layout_marginTop="395dp"
+		android:layout_marginStart="@dimen/_110sdp"
+		android:layout_marginTop="@dimen/_315sdp"
 		android:contentDescription="dustbin"
 		android:src="@drawable/dustbin"
 		app:layout_constraintStart_toStartOf="parent"
