@@ -10,5 +10,4 @@
 	<style name="CurvedButton" parent="">
 		<item name="cornerSize">40dp</item>
 	</style>
-
 </resources>

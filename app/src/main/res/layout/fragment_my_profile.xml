@@ -5,12 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/fragmentContainerprofile"
+    android:background="#CEE6CF">
 
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/fragmentContainerprofile123">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
@@ -24,6 +27,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/uploadPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="108dp"
+        android:background="@drawable/click_effect"
+        android:contentDescription="Upload profile pic"
+        android:src="@drawable/upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profile_image" />
+
+    <ImageView
+        android:id="@+id/editIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:contentDescription="Edit"
+        android:src="@drawable/editbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profile_image"
+        android:background="@drawable/click_effect"/>
 
     <TextView
         android:id="@+id/tvName"
@@ -50,7 +78,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        android:backgroundTint="#f15c6e"
+        android:textColor="#f15c6e"
+        android:enabled="false"/>
 
     <TextView
         android:id="@+id/tvEmailAccount"
@@ -76,8 +107,11 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        android:textColor="#f15c6e"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmailAccount" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailAccount"
+        android:backgroundTint="#f15c6e"
+        android:enabled="false"/>
 
     <TextView
         android:id="@+id/tvCity"
@@ -103,8 +137,11 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        android:textColor="#f15c6e"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCity"
+        android:backgroundTint="#f15c6e"
+        android:enabled="false"/>
 
     <TextView
         android:id="@+id/tvChangePassword"
@@ -143,6 +180,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        app:endIconTint="#5E6C69"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -158,7 +196,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Want to change your password?"
-            android:inputType="none"/>
+            android:textColor="#f15c6e"
+            android:inputType="none"
+            android:backgroundTint="#B5EDB7"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

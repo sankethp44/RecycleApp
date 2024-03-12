@@ -5,7 +5,8 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#CEE6CF">
 
 
     <RelativeLayout
@@ -30,7 +31,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <com.google.android.material.bottomappbar.BottomAppBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,7 +54,6 @@
                     />
 
             </com.google.android.material.bottomappbar.BottomAppBar>
-
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:layout_width="wrap_content"
@@ -103,8 +102,8 @@
         android:layout_height="match_parent"
         android:id="@+id/navigation_drawer"
         android:layout_gravity="start"
-        app:itemIconTint="@color/grey"
-        app:itemTextColor="@color/grey"
+        app:itemIconTint="#CEE6CF"
+        app:itemTextColor="#CEE6CF"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"/>
 

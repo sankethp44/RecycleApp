@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomappbar.BottomAppBar
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -23,20 +24,26 @@ class ChangePasswordFragment : Fragment() {
         hideFab()
     }
     private fun hideFab() {
-        val extendedFabHome: ExtendedFloatingActionButton =
-            requireActivity().findViewById(R.id.extendedFabHome)
-        extendedFabHome.visibility = View.GONE
+        val extendedFab: ExtendedFloatingActionButton =
+            requireActivity().findViewById(R.id.extendedFab)
+        extendedFab.visibility = View.GONE
+
+        val regularFab: FloatingActionButton =
+            requireActivity().findViewById(R.id.fab)
+        regularFab.visibility = View.GONE
+
+        val home: BottomNavigationView =
+            requireActivity().findViewById(R.id.bottom_navigation)
+        home.visibility = View.GONE
+
+        val appbarhome: BottomAppBar =
+            requireActivity().findViewById(R.id.bottomAppBar)
+        appbarhome.visibility = View.GONE
     }
 
     private fun showFab() {
-        val extendedFab: ExtendedFloatingActionButton = requireActivity().findViewById(R.id.extendedFab)
-        extendedFab.visibility = View.VISIBLE
-
-        val regularFab: FloatingActionButton = requireActivity().findViewById(R.id.fab)
-        regularFab.visibility = View.VISIBLE
-
-        val appbarhome: BottomAppBar = requireActivity().findViewById(R.id.bottomAppBar)
-        appbarhome.visibility = View.VISIBLE
+        val extendedFabHome: ExtendedFloatingActionButton = requireActivity().findViewById(R.id.extendedFabHome)
+        extendedFabHome.visibility = View.VISIBLE
     }
     override fun onResume() {
         super.onResume()

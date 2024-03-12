@@ -3,15 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExchangePointFragment">
+    tools:context=".ExchangePointFragment"
+    android:background="#CEE6CF">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Exchange point"
         android:gravity="center"
+        android:text="Exchange point"
         android:textColor="@color/lavender"
-        android:textSize="@dimen/_36ssp"/>
+        android:textSize="@dimen/_36ssp"
+        tools:ignore="HardcodedText,TextContrastCheck" />
 
 </FrameLayout>
