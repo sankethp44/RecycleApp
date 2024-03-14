@@ -1,19 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- res/layout/fragment_exchange_point.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExchangePointFragment"
-    android:background="#CEE6CF">
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/searchEditText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Exchange point"
-        android:textColor="@color/lavender"
-        android:textSize="@dimen/_36ssp"
-        tools:ignore="HardcodedText,TextContrastCheck" />
+        android:layout_height="wrap_content"
+        android:hint="Enter city name"
+        android:layout_marginBottom="16dp"/>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/getLocationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Location"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exchange Points"
+        android:layout_below="@id/getLocationButton"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>
