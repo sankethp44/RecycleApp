@@ -3,12 +3,15 @@ package com.example.recycleapp
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.example.recycleapp.databinding.SplashScreenBinding
+import com.google.firebase.auth.FirebaseAuth
 
 @SuppressLint("CustomSplashScreen")
 class SplashscreenActivity : AppCompatActivity() {
     private lateinit var binding: SplashScreenBinding
+    private lateinit var firebaseAuth: FirebaseAuth
     @Suppress("DEPRECATION")
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,11 +29,20 @@ class SplashscreenActivity : AppCompatActivity() {
         binding.news
         binding.dustbin
 
-        val splashDuration: Long = 3000
-        android.os.Handler().postDelayed({
-            val mainIntent = Intent(this@SplashscreenActivity, LoginActivity::class.java)
-            startActivity(mainIntent)
+        firebaseAuth = FirebaseAuth.getInstance()
+
+        // Check if user is logged in or not
+        Handler().postDelayed({
+            if (firebaseAuth.currentUser != null) {
+                // User is logged in, open MainActivity
+                val intent = Intent(this@SplashscreenActivity, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                // User is not logged in, open SignInActivity
+                val intent = Intent(this@SplashscreenActivity, LoginActivity::class.java)
+                startActivity(intent)
+            }
             finish()
-        }, splashDuration)
+        }, 3000)
     }
 }

@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.recycleapp.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -23,7 +24,8 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
 
     private lateinit var fragmentManager: FragmentManager
     private lateinit var binding: ActivityMainBinding
-    private val shareUrl = "https://raw.githubusercontent.com/sankethp44/Recycle-AppApk/main/Recyclable%20App.apk"
+    private lateinit var firebaseAuth: FirebaseAuth
+    private val shareUrl = "https://raw.githubusercontent.com/sankethp44/Recycle-AppApk/main/app-debug-androidTest.apk"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +50,6 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
                     openFragmentWithAnimation()
                 }
             }
-
             true
         }
 
@@ -123,8 +124,9 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
             }            R.id.nav_locationpage ->openFragment(ExchangePointFragment())
             R.id.nav_feedback ->openFragment(FeedbackFragment())
             R.id.nav_logout -> {
+                firebaseAuth = FirebaseAuth.getInstance()
+                firebaseAuth.signOut()
                 startActivity(Intent(this, LoginActivity::class.java))
-
                 finish()
             }
             R.id.nav_share -> {
@@ -138,7 +140,6 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
                 )
                 startActivity(Intent.createChooser(intent, "Share App"))
             }
-
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true

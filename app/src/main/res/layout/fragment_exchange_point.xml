@@ -1,32 +1,32 @@
-<!-- res/layout/fragment_exchange_point.xml -->
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/searchEditText"
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter city name"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginTop="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/_bg__splash_screen_ek2_color"/>
 
-    <Button
-        android:id="@+id/getLocationButton"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get Location"
-        android:layout_below="@id/searchEditText"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
 
-    <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Exchange Points"
-        android:layout_below="@id/getLocationButton"
-        android:layout_marginTop="8dp"/>
+        <LinearLayout
+            android:id="@+id/imageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clipToPadding="false">
+            <!-- Images will be dynamically added here -->
+        </LinearLayout>
+    </ScrollView>
 
-</RelativeLayout>
+</LinearLayout>
