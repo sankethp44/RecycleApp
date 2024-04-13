@@ -1,9 +1,12 @@
 package com.example.recycleapp
 
+import HowFragment
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -22,6 +25,8 @@ import com.google.firebase.database.ValueEventListener
 
 class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
 
+    private lateinit var pointsTextView: TextView
+    private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var fragmentManager: FragmentManager
     private lateinit var binding: ActivityMainBinding
     private lateinit var firebaseAuth: FirebaseAuth
@@ -29,12 +34,39 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate((layoutInflater))
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
 
-        val toggle = ActionBarDrawerToggle(this,binding.drawerLayout,binding.toolbar,R.string.nav_open,R.string.nav_close)
+        firebaseDatabase = FirebaseDatabase.getInstance()
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        var userPointsRef =
+            firebaseDatabase.getReference("Users").child(userId ?: "").child("points")
+
+        pointsTextView = findViewById(R.id.pointsTextView)
+
+        // Set up ValueEventListener to listen for changes in user points
+        userPointsRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // Get user points from dataSnapshot and update pointsTextView
+                val userPoints = dataSnapshot.getValue(Double::class.java) ?: 0.0
+                pointsTextView.text = "Points earned: ${String.format("%.2f", userPoints)}"
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle error
+                Log.e("MainActivity", "Failed to read user points.", databaseError.toException())
+            }
+        })
+
+        val toggle = ActionBarDrawerToggle(
+            this,
+            binding.drawerLayout,
+            binding.toolbar,
+            R.string.nav_open,
+            R.string.nav_close
+        )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -42,7 +74,7 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
 
         binding.bottomNavigation.background = null
         binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when(item.itemId){
+            when (item.itemId) {
                 R.id.bottom_home -> openFragment(HomeFragment())
                 R.id.bottom_location -> openFragment(ExchangePointFragment())
                 R.id.bottom_cart -> openFragment((ShopFragment()))
@@ -93,8 +125,8 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
 
             transaction.commit()
         }
-
     }
+
     private fun openFragmentWithAnimation() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.setCustomAnimations(

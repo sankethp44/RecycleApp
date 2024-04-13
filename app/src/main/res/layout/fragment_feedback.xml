@@ -1,18 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FeedbackFragment"
-    android:background="#CEE6CF">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_marginTop="85dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Feedback"
-        android:gravity="center"
-        android:textColor="@color/lavender"
-        android:textSize="@dimen/_36ssp"/>
+        android:layout_height="wrap_content"
+        android:backgroundTint="#f15c6e"
+        android:textColor="#f15c6e"
+        android:textColorHint="#f15c6e"
+        android:hint="Your Name" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/editTextFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Feedback"
+        android:lines="10"
+        android:backgroundTint="#f15c6e"
+        android:textColor="#f15c6e"
+        android:textColorHint="#f15c6e"
+        android:gravity="top" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="26sp"
+        android:background="@drawable/rounded_rectangle_background1"
+        android:text="Submit" />
+
+</LinearLayout>

@@ -10,6 +10,7 @@
         android:layout_marginTop="76dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:textColorHint="#f15c6e"
         android:textColor="@color/_bg__splash_screen_ek2_color"/>
 
     <ScrollView
@@ -24,7 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:clipToPadding="false">
+            android:clipToPadding="false"
+            android:layout_margin="0dp"
+            >
             <!-- Images will be dynamically added here -->
         </LinearLayout>
     </ScrollView>
