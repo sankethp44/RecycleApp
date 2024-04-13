@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
     private lateinit var fragmentManager: FragmentManager
     private lateinit var binding: ActivityMainBinding
     private lateinit var firebaseAuth: FirebaseAuth
-    private val shareUrl = "https://raw.githubusercontent.com/sankethp44/Recycle-AppApk/main/app-debug-androidTest.apk"
+    private val shareUrl = "https://raw.githubusercontent.com/sankethp44/Recycle-AppApk/main/app-debug.apk"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
